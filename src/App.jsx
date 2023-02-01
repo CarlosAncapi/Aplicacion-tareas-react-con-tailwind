@@ -10,7 +10,7 @@ const App = () => {
           <h1 className="text-3xl font-semibold uppercase tracking-[0.2em]
             text-white">Tareas</h1>
           <button>
-            <MoonIcon/>
+            <MoonIcon className="fill-red-400"/>
           </button>
         </div>
         <form className="mt-8 flex items-center gap-4 rounded-md overflow-hidden bg-white border   
