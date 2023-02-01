@@ -1,3 +1,5 @@
+import CrossIcon from "./icons/CrossIcon";
+
 const App = () => {
   return (
     <div className="bg-gray-300 bg-[url('./assets/images/bg-mobile-light.jpg')] 
@@ -20,23 +22,33 @@ const App = () => {
 
       <main className="container mx-auto px-4 mt-8">
         <div className="bg-white rounded-md px-4">
-          <article className="">
-            <button className="inline-block h-5 w-5 rounded-full border-2"></button>
-            <p className="text-gray-600">Completar el curso online de java</p>
-            <button> la (x)</button>
+
+          <article className="flex gap-4 py-4">
+            <button className="inline-block h-5 w-5 rounded-full border-2 flex-none"></button>
+            <p className="text-gray-600 grow">Completar el curso online de java</p>
+            <button className="flex-none">
+              <CrossIcon/>
+            </button>
           </article>
-          <article className="">
-            <button>Circulo</button>
-            <p>Completar el curso online de java</p>
-            <button> la (x)</button>
+
+          <article className="flex gap-4 py-4">
+            <button className="inline-block h-5 w-5 rounded-full border-2 flex-none"></button>
+            <p className="text-gray-600 grow">Completar el curso online de java</p>
+            <button className="flex-none">
+              <CrossIcon/>
+            </button>
           </article>
-          <article className="">
-            <button>Circulo</button>
-            <p>Completar el curso online de java</p>
-            <button> la (x)</button>
+
+          <article className="flex gap-4 py-4">
+            <button className="inline-block h-5 w-5 rounded-full border-2 flex-none"></button>
+            <p className="text-gray-600 grow">Completar el curso online de java</p>
+            <button className="flex-none">
+              <CrossIcon/>
+            </button>
           </article>
+
           <section>
-            <span>5 item por completar</span>
+            <span>5 item por completar </span>
             <button>Eliminar tareas completadas</button>
           </section>
         </div>
