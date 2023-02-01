@@ -1,4 +1,5 @@
 import CrossIcon from "./icons/CrossIcon";
+import MoonIcon from "./icons/MoonIcon";
 
 const App = () => {
   return (
@@ -8,7 +9,9 @@ const App = () => {
         <div className="flex justify-between">
           <h1 className="text-3xl font-semibold uppercase tracking-[0.2em]
             text-white">Tareas</h1>
-          <button>luna</button>
+          <button>
+            <MoonIcon/>
+          </button>
         </div>
         <form className="mt-8 flex items-center gap-4 rounded-md overflow-hidden bg-white border   
           py-4 px-4 ">
@@ -49,7 +52,7 @@ const App = () => {
 
           <section className="py-4 px-4 flex justify-between">
             <span className="text-gray-400">5 item por completar </span>
-            <button className="text-gray-400">Eliminar tareas completadas</button>
+            <button className="text-gray-400">Eliminar las completadas</button>
           </section>
         </div>
       </main>
