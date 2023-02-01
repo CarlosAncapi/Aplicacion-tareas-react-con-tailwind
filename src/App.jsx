@@ -21,9 +21,9 @@ const App = () => {
       </header>
 
       <main className="container mx-auto px-4 mt-8">
-        <div className="bg-white rounded-md ">
+        <div className="bg-white rounded-md [&>article]:p-4">
 
-          <article className="flex gap-4 py-4 border-b  border-b-gray-400 px-4">
+          <article className="flex gap-4 border-b  border-b-gray-400">
             <button className="inline-block h-5 w-5 rounded-full border-2 flex-none"></button>
             <p className="text-gray-600 grow">Completar el curso online de java</p>
             <button className="flex-none">
@@ -31,7 +31,7 @@ const App = () => {
             </button>
           </article>
 
-          <article className="flex gap-4 py-4 border-b  border-b-gray-400 px-4">
+          <article className="flex gap-4 border-b  border-b-gray-400">
             <button className="inline-block h-5 w-5 rounded-full border-2 flex-none"></button>
             <p className="text-gray-600 grow">Completar el curso online de java</p>
             <button className="flex-none">
@@ -39,7 +39,7 @@ const App = () => {
             </button>
           </article>
 
-          <article className="flex gap-4 py-4 border-b  border-b-gray-400 px-4">
+          <article className="flex gap-4 border-b  border-b-gray-400">
             <button className="inline-block h-5 w-5 rounded-full border-2 flex-none"></button>
             <p className="text-gray-600 grow">Completar el curso online de java</p>
             <button className="flex-none">
@@ -47,9 +47,9 @@ const App = () => {
             </button>
           </article>
 
-          <section>
-            <span>5 item por completar </span>
-            <button>Eliminar tareas completadas</button>
+          <section className="py-4 px-4 flex justify-between">
+            <span className="text-gray-400">5 item por completar </span>
+            <button className="text-gray-400">Eliminar tareas completadas</button>
           </section>
         </div>
       </main>
