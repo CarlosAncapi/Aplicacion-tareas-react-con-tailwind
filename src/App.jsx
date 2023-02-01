@@ -54,13 +54,15 @@ const App = () => {
         </div>
       </main>
 
-      <section className="container mx-auto px-4">
-        <button>Todas</button>
-        <button>Pendientes</button>
-        <button>Completadas</button>
+      <section className="container mx-auto px-4 mt-8">
+        <div className="bg-white flex justify-center rounded-md p-4 gap-10">
+            <button className="text-blue-600">Todas</button>
+            <button className="hover:text-blue-600">Pendientes</button>
+            <button className="hover:text-blue-600">Completadas</button>
+        </div>
       </section>
 
-      <p className="text-center">presiona y arrastra las tareas para ordenar la lista</p>
+      <p className="text-center mt-8">Presiona y arrastra las tareas para ordenar la lista</p>
     </div>
   )};
 
