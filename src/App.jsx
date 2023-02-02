@@ -7,11 +7,11 @@ import TodoFilter from "./components/TodoFilter";
 import TodoList from "./components/TodoList";
 
 const initialState = [
-  {id:1, title: "completar los cursos de react", completed: true},
-  {id:2, title: "ejercitar el cuerpo", completed: false},
-  {id:3, title: "comer menos", completed: false},
-  {id:4, title: "meditar 20 minutos", completed: true},
-  {id:5, title: "completar deafio TODO front end mentor", completed: false},
+  {id:1, title: "Completar los cursos de React", completed: true},
+  {id:2, title: "Ejercitar con JavasScript", completed: false},
+  {id:3, title: "Completar curso Tailwind CSS", completed: false},
+  {id:4, title: "Empezar la creacion de portafolio web", completed: true},
+  {id:5, title: "Postular a trabajos desarrollador ", completed: false},
 ]
 
 const App = () => {
