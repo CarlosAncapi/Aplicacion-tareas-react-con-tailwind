@@ -1,6 +1,25 @@
-const TodoCreate = () => {
+import { useState } from "react";
+
+const TodoCreate = ({ createTodo }) => {
+
+    const [title, setTitle] = useState("");
+
+    const handleSubmitAddTodo = (e) => {
+        e.preventDefault();
+        
+        if (!title.trim()) {
+            return setTitle("");
+        }else{
+            createTodo(title);
+            setTitle("");
+        };
+
+    };
+
+
     return (
         <form
+            onSubmit={handleSubmitAddTodo}
             className="mt-8 flex items-center gap-4 overflow-hidden rounded-md border bg-white   
                 py-4 px-4 "
         >
@@ -9,6 +28,8 @@ const TodoCreate = () => {
                 className="w-full text-gray-400 outline-none"
                 type="text"
                 placeholder="Crea una nueva Tarea..."
+                value={title}
+                onChange={(e) => setTitle(e.target.value)}
             />
         </form>
     );
