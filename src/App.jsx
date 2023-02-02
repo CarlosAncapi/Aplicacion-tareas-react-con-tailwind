@@ -39,6 +39,8 @@ const App = () => {
         :todo ))
   }
 
+  const computedItemsLeft = todos.filter((todo) => !todo.completed).length;
+
   return (
     <div className="bg-gray-300 bg-[url('./assets/images/bg-mobile-light.jpg')] 
     bg-contain bg-no-repeat min-h-screen">
@@ -50,7 +52,7 @@ const App = () => {
 
         <TodoList todos={todos} removeTodo={removeTodo} updateTodo={updateTodo}/>
 
-        <TodoComputed />
+        <TodoComputed computedItemsLeft={computedItemsLeft} />
 
         <TodoFilter/>
       </main>
