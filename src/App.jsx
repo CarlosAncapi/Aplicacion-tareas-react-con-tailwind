@@ -63,7 +63,8 @@ const App = () => {
     }
   }
   return (
-    <div className="bg-gray-300 bg-[url('./assets/images/bg-mobile-light.jpg')] 
+    <div className="dark:bg-gray-900  bg-gray-300 bg-[url('./assets/images/bg-mobile-light.jpg')] 
+    dark:bg-[url('./assets/images/bg-mobile-dark.jpg')] 
     bg-contain bg-no-repeat min-h-screen">
 
       <Header />
@@ -89,7 +90,7 @@ const App = () => {
       </main>
 
 
-      <p className="text-center mt-8">Presiona y arrastra las tareas para ordenar la lista</p>
+      <p className="dark:text-gray-400 text-center mt-8">Presiona y arrastra las tareas para ordenar la lista</p>
     </div>
   )};
 
