@@ -10,7 +10,7 @@ const initialState = [
   {id:1, title: "completar los cursos de react", completed: true},
   {id:2, title: "ejercitar el cuerpo", completed: false},
   {id:3, title: "comer menos", completed: false},
-  {id:4, title: "meditar 20 minutos", completed: false},
+  {id:4, title: "meditar 20 minutos", completed: true},
   {id:5, title: "completar deafio TODO front end mentor", completed: false},
 ]
 
@@ -28,6 +28,17 @@ const App = () => {
     setTodos([...todos, newTodo])
   }
 
+  const removeTodo = (id) => {
+    setTodos(todos.filter((todo) => todo.id !== id));
+  }
+
+  const updateTodo = (id) => {
+    setTodos(todos.map( todo => 
+      todo.id === id 
+        ? {...todo, completed: !todo.completed}
+        :todo ))
+  }
+
   return (
     <div className="bg-gray-300 bg-[url('./assets/images/bg-mobile-light.jpg')] 
     bg-contain bg-no-repeat min-h-screen">
@@ -37,7 +48,7 @@ const App = () => {
       <main className="container mx-auto px-4 mt-8">
         <TodoCreate createTodo={createTodo}/>
 
-        <TodoList todos={todos}/>
+        <TodoList todos={todos} removeTodo={removeTodo} updateTodo={updateTodo}/>
 
         <TodoComputed />
 
