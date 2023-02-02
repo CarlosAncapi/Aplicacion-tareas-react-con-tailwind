@@ -1,4 +1,4 @@
-import MoonIcon from "./icons/MoonIcon";
+import IconMoon from "./icons/IconMoon";
 
 const Header = () => {
     return (
@@ -11,7 +11,7 @@ const Header = () => {
                     Tareas
                 </h1>
                 <button>
-                    <MoonIcon className="fill-red-400" />
+                    <IconMoon className="fill-red-400" />
                 </button>
             </div>
         </header>
