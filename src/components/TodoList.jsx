@@ -2,7 +2,7 @@ import TodoIitem from "./TodoItem";
 
 const TodoList = ({todos, removeTodo, updateTodo}) => {
     return (
-        <div className="mt-8 rounded-t-md bg-white [&>article]:p-4">
+        <div className="mt-8 overflow-hidden rounded-t-md bg-white [&>article]:p-4">
 
             {todos.map((todo) => (
                 <TodoIitem 

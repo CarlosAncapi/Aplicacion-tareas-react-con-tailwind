@@ -1,7 +1,7 @@
 const TodoFilter = ({changeFilter, filter}) => {
     return (
         <section className="container mx-auto mt-8 px-4">
-            <div className="dark:bg-gray-800 dark:bg-gray-800  flex justify-center gap-10 rounded-md bg-white p-4">
+            <div className="dark:bg-gray-800 duration-1000 flex justify-center gap-10 rounded-md bg-white p-4">
                 
                 <button 
                     className={`${
