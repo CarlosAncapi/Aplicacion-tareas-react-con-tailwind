@@ -39,6 +39,10 @@ const App = () => {
         :todo ))
   }
 
+  const clearCompleted = () => {
+    setTodos(todos.filter((todo) => !todo.completed));
+  }
+
   const computedItemsLeft = todos.filter((todo) => !todo.completed).length;
 
   return (
@@ -52,7 +56,7 @@ const App = () => {
 
         <TodoList todos={todos} removeTodo={removeTodo} updateTodo={updateTodo}/>
 
-        <TodoComputed computedItemsLeft={computedItemsLeft} />
+        <TodoComputed computedItemsLeft={computedItemsLeft} clearCompleted={clearCompleted}/>
 
         <TodoFilter/>
       </main>
