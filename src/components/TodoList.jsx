@@ -11,7 +11,7 @@ const TodoList = ({todos, removeTodo, updateTodo}) => {
                     <div 
                         ref={droppableProvided.innerRef}
                         {...droppableProvided.droppableProps}
-                        className="mt-8 overflow-hidden rounded-t-md bg-white [&>article]:p-4">
+                        className="mt-8 overflow-hidden rounded-t-md bg-white dark:bg-gray-800 [&>article]:p-4">
 
                         {todos.map((todo, index) => (
                             
