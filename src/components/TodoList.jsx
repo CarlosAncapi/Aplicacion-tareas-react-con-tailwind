@@ -1,19 +1,46 @@
+import { Droppable, Draggable } from "@hello-pangea/dnd";
+
 import TodoIitem from "./TodoItem";
 
 const TodoList = ({todos, removeTodo, updateTodo}) => {
     return (
-        <div className="mt-8 overflow-hidden rounded-t-md bg-white [&>article]:p-4">
 
-            {todos.map((todo) => (
-                <TodoIitem 
-                    key={todo.id} 
-                    todo={todo} 
-                    removeTodo={removeTodo}
-                    updateTodo={updateTodo}
-                />
-            ))}
+        <Droppable droppableId="tareas">
+            {
+                (droppableProvided) => (
+                    <div 
+                        ref={droppableProvided.innerRef}
+                        {...droppableProvided.droppableProps}
+                        className="mt-8 overflow-hidden rounded-t-md bg-white [&>article]:p-4">
 
-        </div>
+                        {todos.map((todo, index) => (
+                            
+                            <Draggable 
+                                key={todo.id}
+                                index={index}
+                                draggableId={`${todo.id}`}
+                            >
+                                {
+                                    (draggableProvided) => (
+                                        <TodoIitem 
+                                            todo={todo} 
+                                            removeTodo={removeTodo}
+                                            updateTodo={updateTodo}
+                                            ref={draggableProvided.innerRef}
+                                            {...draggableProvided.dragHandleProps}
+                                            {...draggableProvided.draggableProps}
+                                        />
+                                    )
+                                }
+                            </Draggable>
+                        ))}
+
+                        {droppableProvided.placeholder}
+                    </div>
+                )
+            }
+
+        </Droppable>
     );
 };
 
